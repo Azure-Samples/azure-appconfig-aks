@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: azure-appconfig-aks
+metadata:
+  template: azure-appconfig-aks@0.0.1
+hooks:
+  predeploy:
+    interactive: false
+    shell: sh
+    run: chmod +x infra/hooks/predeploy.sh && infra/hooks/predeploy.sh # installs additional components on the cluster
+    
+services:
+  app:
+    project: ./app/src
+    language: csharp
+    host: aks
+    k8s:
+      deploymentPath: ../manifests

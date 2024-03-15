@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: demo-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: demo-app
@@ -16,10 +16,10 @@ spec:
         - name: demo-app
           image: {{.Env.SERVICE_APP_IMAGE_NAME}}
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           volumeMounts:
             - name: config-volume
-              mountPath: /workspace/oryx-output/Config
+              mountPath: /app/Config
       volumes:
       - name: config-volume 
         configMap: 

@@ -12,7 +12,9 @@ hooks:
 services:
   app:
     project: ./app/src
-    language: csharp
+    language: dotnet
     host: aks
     k8s:
       deploymentPath: ../manifests
+    docker:
+      path: ./Dockerfile

@@ -11,4 +11,4 @@ else
   echo "Azure App configuration Kubernetes provider installed, skipping"
 fi
 
-az appconfig kv import --source file --path "./app/config/settings.json" --name "${AZURE_APP_CONFIGURATION_NAME}" --label demo-app --separator __ --format json --yes
+az appconfig kv import --source file --path "./app/config/sourceSettings.json" --name "${AZURE_APP_CONFIGURATION_NAME}" --label demo-app --separator __ --format json --yes

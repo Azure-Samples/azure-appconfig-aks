@@ -24,3 +24,10 @@ spec:
         keyValues:
         - key: Settings__Message
           label: demo-app
+  featureFlag:
+    refresh:
+      enabled: true
+      interval: 30s
+    selectors:
+      - keyFilter: "*"
+        labelFilter: demo-app

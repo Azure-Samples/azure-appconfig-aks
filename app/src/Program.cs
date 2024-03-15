@@ -1,3 +1,5 @@
+using Microsoft.FeatureManagement;
+
 namespace Demo
 {
     public class Program
@@ -8,6 +10,9 @@ namespace Demo
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+            // Add feature management to the container of services.
+            builder.Services.AddFeatureManagement();
 
             builder.Services.Configure<Settings>(builder.Configuration.GetSection("Settings"));
 

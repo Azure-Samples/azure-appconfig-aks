@@ -6,7 +6,7 @@ targetScope = 'subscription'
 param environmentName string
 
 @minLength(1)
-@description('Primary location for all resources')
+@description('The location of all resources')
 param location string
 
 @description('The resource name of the AKS cluster')

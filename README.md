@@ -60,9 +60,9 @@ You can monitor the progress in the terminal and on the Azure portal. After a fe
 
 This template deploys a simple demo ASP.NET web application to the AKS cluster. If you want to deploy your own application, you can replace the following content with your own:
 
-- You should put your source code in the `src\app\src` folder.
-- You should put your source configuration in the `src\app\config` folder.
-- You should put your Kubernetes manifests in the `src\app\manifests` folder.
+- You should put your source code in the `app/src` folder.
+- You should put your source configuration in the `app/config` folder.
+- You should put your Kubernetes manifests in the `app/manifests` folder.
 
 ## Deploying the application
 

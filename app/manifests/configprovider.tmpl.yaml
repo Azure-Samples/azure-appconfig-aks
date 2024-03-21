@@ -1,0 +1,33 @@
+apiVersion: azconfig.io/v1
+kind: AzureAppConfigurationProvider
+metadata:
+  name: demo-app-config-provider
+spec:
+  endpoint: {{.Env.AZURE_APP_CONFIGURATION_ENDPOINT}}
+  target:
+    configMapName: demo-app-config
+    configMapData:
+      key: settings.json
+      type: json
+      separator: __
+  auth:
+    workloadIdentity:
+      managedIdentityClientId: {{.Env.AZURE_APP_CONFIGURATION_IDENTITY_CLIENT_ID}}
+  configuration:
+    selectors:
+      - keyFilter: "*"
+        labelFilter: demo-app
+    refresh:
+      enabled: true
+      interval: 30s
+      monitoring:
+        keyValues:
+        - key: Settings__Message
+          label: demo-app
+  featureFlag:
+    refresh:
+      enabled: true
+      interval: 30s
+    selectors:
+      - keyFilter: "*"
+        labelFilter: demo-app

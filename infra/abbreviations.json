@@ -1,0 +1,7 @@
+{
+    "appConfigurationStores": "appcs-",
+    "managedIdentityUserAssignedIdentities": "mi-",
+    "containerRegistryRegistries": "acr",
+    "containerServiceManagedClusters": "aks-",
+    "federatedIdentityCredentials": "fic-"
+}

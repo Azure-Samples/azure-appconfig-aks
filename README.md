@@ -36,7 +36,7 @@ If you are starting from this end state repo, use `azd init` to clone this templ
 ```sh
 mkdir my-app
 cd my-app
-azd init -t https://github.com/sabbour/aks-app-template
+azd init -t https://github.com/Azure-Samples/azure-appconfig-aks
 ```
 
 ## Deploying infrastructure

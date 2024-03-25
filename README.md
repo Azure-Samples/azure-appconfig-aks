@@ -1,5 +1,7 @@
 # Azure Developer CLI template: Configure AKS workload with Azure App Configuration
 
+!["Resources"](assets/azure-appconfig-aks.png)
+
 ## Prerequisites
 
 - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)

@@ -6,8 +6,12 @@ metadata:
 hooks:
   predeploy:
     interactive: false
-    shell: sh
-    run: chmod +x infra/hooks/predeploy.sh && infra/hooks/predeploy.sh # installs additional components on the cluster
+    windows:
+      shell: pwsh
+      run: infra/hooks/predeploy.ps1 # installs additional components on the cluster
+    posix:
+      shell: sh
+      run: infra/hooks/predeploy.sh # installs additional components on the cluster      
     
 services:
   app:

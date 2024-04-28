@@ -6,8 +6,7 @@
 
 - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
 - [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd)
-- [Visual Studio Code](https://code.visualstudio.com/download)
-- [AKS Developer Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.aks-devx-tools)
+- [helm](https://helm.sh/docs/intro/install/)
 
 ## What is included in this repository
 
@@ -31,6 +30,28 @@ The template uses the following [event hooks](https://learn.microsoft.com/azure/
 
 - [predeploy](./infra/azd-hooks/predeploy.sh) to install additional cluster components (Azure App Configuration Kubernetes Provider).
 
+## Quickstart
+
+This quickstart will show you how to initialize the template, provision the infrastructure, and deploy the application:
+
+```sh
+mkdir my-app
+cd my-app
+
+# First-time project setup. Initialize a project in the current directory, using this template. 
+azd init -t azure-appconfig-aks
+
+# Provision and deploy to Azure
+azd up
+```
+
+To learn more about the template, follow the steps below:
+
+- [Initializing the template](#initializing-the-template)
+- [Deploying infrastructure](#deploying-infrastructure)
+- [Updating application source](#updating-application-source)
+- [Deploying the application](#deploying-the-application)
+
 ## Initializing the template
 
 If you are starting from this end state repo, use `azd init` to clone this template locally.
@@ -38,7 +59,7 @@ If you are starting from this end state repo, use `azd init` to clone this templ
 ```sh
 mkdir my-app
 cd my-app
-azd init -t https://github.com/Azure-Samples/azure-appconfig-aks
+azd init -t azure-appconfig-aks
 ```
 
 ## Deploying infrastructure

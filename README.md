@@ -1,3 +1,23 @@
+---
+page_type: sample
+languages:
+- azdeveloper
+- csharp
+- powershell
+- bash
+- html
+- bicep
+products:
+- azure
+- azure-kubernetes-service
+- azure-container-registry
+- azure-app-configuration
+urlFragment: azure-appconfig-aks
+name: Azure Developer CLI template - Configure AKS workload with Azure App Configuration
+description: Using Azure Developer CLI with Bicep, this template accelerates AKS workload setup with Azure App Configuration.
+---
+<!-- YAML front-matter schema: https://review.learn.microsoft.com/en-us/help/contribute/samples/process/onboarding?branch=main#supported-metadata-fields-for-readmemd -->
+
 # Azure Developer CLI template: Configure AKS workload with Azure App Configuration
 
 !["Resources"](assets/azure-appconfig-aks.png)

@@ -5,7 +5,7 @@ param kubernetesVersion string
 @description('Custom tags to apply to the resources')
 param tags object = {}
 
-resource aks 'Microsoft.ContainerService/managedClusters@2023-02-02-preview' = {
+resource aks 'Microsoft.ContainerService/managedClusters@2025-05-01' = {
   location: location
   name: name
   properties: {
@@ -19,14 +19,11 @@ resource aks 'Microsoft.ContainerService/managedClusters@2023-02-02-preview' = {
       }
       verticalPodAutoscaler: {
         enabled: true
-        controlledValues: 'RequestsAndLimits'
-        updateMode: 'Off' // The UpdateMode of vertical Pod Autoscaler can't be changed in preview
       }
     }
     
     ingressProfile: {
       webAppRouting: {
-        dnsZoneResourceId: ''
         enabled: true
       }
     }
@@ -74,7 +71,6 @@ resource aks 'Microsoft.ContainerService/managedClusters@2023-02-02-preview' = {
 
     apiServerAccessProfile: {
       enablePrivateCluster: false
-      enableVnetIntegration: false
     }
 
     azureMonitorProfile: {

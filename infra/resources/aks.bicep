@@ -95,6 +95,7 @@ resource aks 'Microsoft.ContainerService/managedClusters@2025-05-01' = {
     }
     autoUpgradeProfile: {
       upgradeChannel: 'patch'
+      nodeOSUpgradeChannel: 'NodeImage'
     }
     addonProfiles: {
       azurepolicy: {
@@ -104,6 +105,10 @@ resource aks 'Microsoft.ContainerService/managedClusters@2025-05-01' = {
     securityProfile: {
       workloadIdentity: {
         enabled: true
+      }
+      imageCleaner: {
+        enabled: true
+        intervalHours: 24
       }
     }
   }

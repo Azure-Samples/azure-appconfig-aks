@@ -24,7 +24,7 @@ param identityName string = ''
 @description('The resource name of the Federated Credential')
 param federatedIdentityName string = ''
 
-param kubernetesVersion string = '1.28.5'
+param kubernetesVersion string = '1.32.6'
 
 // Tags that should be applied to all resources.
 // 

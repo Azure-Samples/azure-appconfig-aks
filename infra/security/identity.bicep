@@ -2,8 +2,8 @@ param name string
 param federatedIdentityName string
 param location string
 param aksOidcIssuer string
-param serviceAccountNamespace string = 'azappconfig-system'
-param serviceAccountName string = 'az-appconfig-k8s-provider'
+param serviceAccountNamespace string = 'azure-appconfig-aks'
+param serviceAccountName string = 'demo-service-account'
 
 @description('Custom tags to apply to the resources')
 param tags object = {}

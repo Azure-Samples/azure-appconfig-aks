@@ -39,6 +39,7 @@ resource aks 'Microsoft.ContainerService/managedClusters@2025-05-01' = {
         maxCount: 3
         vmSize: 'Standard_DS4_v2'
         osType: 'Linux'
+        osSKU: 'AzureLinux'
         type: 'VirtualMachineScaleSets'
         mode: 'System'
         maxPods: 250
@@ -58,6 +59,7 @@ resource aks 'Microsoft.ContainerService/managedClusters@2025-05-01' = {
         maxCount: 3
         vmSize: 'Standard_DS4_v2'
         osType: 'Linux'
+        osSKU: 'AzureLinux'
         type: 'VirtualMachineScaleSets'
         mode: 'User'
         maxPods: 250

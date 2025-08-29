@@ -12,7 +12,7 @@ spec:
       separator: __
   auth:
     workloadIdentity:
-      managedIdentityClientId: {{.Env.AZURE_APP_CONFIGURATION_IDENTITY_CLIENT_ID}}
+      serviceAccountName: demo-service-account
   configuration:
     selectors:
       - keyFilter: "*"
